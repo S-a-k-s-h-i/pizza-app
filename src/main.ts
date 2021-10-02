@@ -4,6 +4,7 @@ import * as helmet from 'helmet';
 import * as csurf from 'csurf';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
+const expressLayout = require('express-layout');
 
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
@@ -16,17 +17,16 @@ async function bootstrap() {
   //protect app from web vulnerabilities by setting http headers
   app.use(helmet());
   
+  
   //set static assets to public folder
   app.useStaticAssets(join(__dirname, '..', 'public'));
   //set views dir to views in resources folder
   app.setBaseViewsDir(join(__dirname, '..', 'resources/views'));
   //set Template engine
   app.set('view engine', 'ejs');
+  app.use(expressLayout())
 
   await app.listen(3000);
 }
 bootstrap();
-function cookieParser(): any {
-  throw new Error('Function not implemented.');
-}
 

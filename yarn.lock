@@ -3761,6 +3761,13 @@ expect@^27.2.0:
     jest-message-util "^27.2.0"
     jest-regex-util "^27.0.6"
 
+express-layout@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/express-layout/-/express-layout-0.1.0.tgz#83276f2443b6ed01101b2974dcdd1a75d5a59806"
+  integrity sha1-gydvJEO27QEQGyl03N0addWlmAY=
+  dependencies:
+    obj-extend "~0.1.0"
+
 express@4.17.1, express@^4.17.1:
   version "4.17.1"
   resolved "https://registry.yarnpkg.com/express/-/express-4.17.1.tgz#4491fc38605cf51f8629d39c2b5d026f98a4c134"
@@ -5905,6 +5912,11 @@ nwsapi@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.0.tgz#204879a9e3d068ff2a55139c2c772780681a38b7"
   integrity sha512-h2AatdwYH+JHiZpv7pt/gSX1XoRGb7L/qSIeuqA6GwYoF9w1vP1cw42TO0aI2pNyshRK5893hNSl+1//vHK7hQ==
+
+obj-extend@~0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/obj-extend/-/obj-extend-0.1.0.tgz#bb448a4775fb95eb34a781f908bbac2df23dbb5b"
+  integrity sha1-u0SKR3X7les0p4H5CLusLfI9u1s=
 
 object-assign@^4, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"

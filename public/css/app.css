@@ -32,3 +32,34 @@ nav li a:hover {
   border-color: #fff;
   color: #fff;
 }
+
+.btn-primary {
+  background: #ff4c29;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+.btn-primary:hover {
+  background: #ff6701;
+}
+
+section.cart {
+  background: #f8f8f8;
+}
+section.cart .total-amount {
+  color: #ff4c29;
+}
+section.cart .size {
+  background: #f8f8f8;
+}
+
+section.login {
+  background: #f8f8f8;
+  height: calc(100vh - 68px);
+}
+section.login a {
+  color: #ff4c29;
+  transition: all 0.3s ease-in-out;
+}
+section.login a:hover {
+  color: #ff6701;
+}

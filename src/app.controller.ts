@@ -9,8 +9,17 @@ export class AppController {
   @Render('home')
   root(){}
 
-  @Get('/main')
+  @Get('/cart')
+  @Render('cart')
   hello(){
-    return 'hello'
+  }
+
+  @Get('/login')
+  @Render('auth/login')
+  login(){
+  }
+  @Get('/register')
+  @Render('auth/register')
+  register(){
   }
 }
