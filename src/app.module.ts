@@ -1,22 +1,27 @@
 import { Module } from '@nestjs/common';
 import { APP_GUARD } from '@nestjs/core';
+import { MongooseModule } from '@nestjs/mongoose';
 import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { AuthModule } from './auth/auth.module';
+import { OrderModule } from './order/order.module';
+import { MenuModule } from './menu/menu.module';
 
 @Module({
   imports: [
+    MongooseModule.forRoot(process.env.MONGO_CONNECTION_URL),
     ThrottlerModule.forRoot({
       ttl: 60,
       limit: 10,
     }),
+    AuthModule,
+    OrderModule,
+    MenuModule,
   ],
-  controllers: [AppController],
   providers: [
     {
       provide: APP_GUARD,
       useClass: ThrottlerGuard
     },
-    AppService],
+    ],
 })
 export class AppModule {}
