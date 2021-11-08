@@ -8,7 +8,6 @@ export class MenuController {
     @Get()
     async root(@Res() res){
         const pizzas = await this.menuService.allPizzas();
-        console.log(pizzas)
         return res.render('home',{pizzas:pizzas});
     }
   
