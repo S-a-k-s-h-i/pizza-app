@@ -1,5 +1,5 @@
-    <section class="main">
-        <!-- <div class="container mx-auto flex items-center justify-between pr-0">
+<section class="main">
+  <!-- <div class="container mx-auto flex items-center justify-between pr-0">
             <div class="w-1/2 pl-6">
                 <h6 class="text-lg"><em>Are you hungry?</em></h6>
                 <h1 class="text-5xl font-bold">Don't Wait !! Order now</h1>
@@ -8,27 +8,43 @@
                 <img src="img/hero-pizza.png" height="600" width="600"  alt="">
             </div>
         </div> -->
-        <img src="img/main1.png" alt="hello">
-    </section>
+  <img src="img/main1.png" alt="hello" />
+</section>
 
-    <section class="menu container mx-auto p-8">
-        <h1 class="text-2xl font-bold mb-8">All Pizzas</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
-           <% pizzas.forEach(function(pizza){ %>
-            <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="img/<%= pizza.toJSON().image %>" alt="">
-                <div class="text-center">
-                    <h6 class="mb-4 text-lg"><%= pizza.toJSON().name %></h6>
-                    <span class="py-1 px-4 rounded-full uppercase text-xs size"><%= pizza.toJSON().size %></span>
-                    <div class="flex items-center justify-around mt-4">
-                        <span class="font-bold text-lg">₹ <%= pizza.toJSON().price %></span>
-                        <button class="rounded-full add-to-cart py-1 px-6 flex items-center font-bold">
-                            <span>+</span>
-                            <span class="ml-4">Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-           <% })%>
+<section class="menu container mx-auto py-8 p-2">
+  <h1 class="text-2xl font-bold mb-8">All Pizzas</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+    <% pizzas.forEach(function(pizza){ %>
+    <div class="w-64">
+      <img
+        class="h-40 mb-4 mx-auto"
+        src="img/<%= pizza.toJSON().image %>"
+        alt=""
+      />
+      <div class="text-center">
+        <h6 class="mb-4 text-lg"><%= pizza.toJSON().name %></h6>
+        <span class="py-1 px-4 rounded-full uppercase text-xs size"
+          ><%= pizza.toJSON().size %></span
+        >
+        <div class="flex items-center justify-around mt-4">
+          <span class="font-bold text-lg">₹<%= pizza.toJSON().price %></span>
+          <button
+            class="
+              rounded-full
+              add-to-cart
+              py-1
+              px-6
+              flex
+              items-center
+              font-bold
+            "
+          >
+            <span>+</span>
+            <span class="ml-3">Add</span>
+          </button>
         </div>
-    </section>
+      </div>
+    </div>
+    <% })%>
+  </div>
+</section>
