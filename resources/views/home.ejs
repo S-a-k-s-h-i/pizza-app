@@ -29,6 +29,7 @@
         <div class="flex items-center justify-around mt-4">
           <span class="font-bold text-lg">₹<%= pizza.toJSON().price %></span>
           <button
+            data-pizza="<%= JSON.stringify(pizza) %>"
             class="
               rounded-full
               add-to-cart

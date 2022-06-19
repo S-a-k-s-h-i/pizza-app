@@ -5,6 +5,7 @@ import * as csurf from 'csurf';
 import { NestExpressApplication } from '@nestjs/platform-express';
 import { join } from 'path';
 import * as session from 'express-session';
+import { addSession } from './general/middlewares/session.middleware';
 const expressLayout = require('express-layout');
 const flash = require('express-flash');
 const mongoStore = require('connect-mongo');
@@ -42,6 +43,8 @@ async function bootstrap() {
   //set Template engine
   app.set('view engine', 'ejs');
   app.use(expressLayout());
+
+  app.use(addSession);
 
   await app.listen(3000);
 }
